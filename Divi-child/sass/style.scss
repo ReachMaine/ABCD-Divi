@@ -1,0 +1,20 @@
+/*
+ Theme Name:  Divi Child Theme
+ Description:  Child Theme for Divi for Acadia Burial & Cremation Direct
+ Author:       REACH Maine Marketing
+ Author URI:   https://www.reachmaine.com
+ Template:     Divi
+ Version:      1.0.0
+*/
+
+/*****Add any custom CSS below this line*****/
+
+@import "partials/colors";
+@import "partials/basics";
+@import "partials/gform";
+@import "partials/blog";
+@import "partials/rmm-menu-styles";
+
+
+
+@import "partials/media"; // keep at bottom;

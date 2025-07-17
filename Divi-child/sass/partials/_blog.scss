@@ -1,0 +1,46 @@
+/* styling for blog module & blog posts */
+
+
+/*
+  rmm-blog-image-left => set the blog archive s.t. image if there is one is on hte left
+*/
+
+@media (min-width: 767px) {
+
+  /*set the image width*/
+  .et_pb_module.et_pb_posts.rmm-bloggrid-image-left {
+    article {
+      border: 0px;
+      display: flex;
+      flex-direction: row;
+      .entry-featured-image-url  {
+        margin: 0px!important;
+        padding-right: 10px;
+      }
+
+      /*set the details width*/
+
+      .entry-title,
+      .post-meta,
+      .post-content {
+       }
+    }
+  }
+} 
+
+/*blog image aspect ratio square 1:1*/
+.rmm-blog-image-sq .entry-featured-image-url {
+  padding-top: 100%;
+  display: block;
+}
+.rmm-blog-image-sq .entry-featured-image-url img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  object-fit: cover;
+}
+

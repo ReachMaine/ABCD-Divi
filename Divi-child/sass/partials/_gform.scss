@@ -1,0 +1,100 @@
+/* gravity forms styling */
+.gform_wrapper {
+	accent-color: $button-bkg;
+	.gform_fields  { // ul
+		.gfield {
+				input,
+				textarea {
+					background-color: #f8f6f4;
+					font-family: 'Open Sans',Helvetica,Arial,Lucida,sans-serif;
+					border: 0px;
+
+				}
+				input:read-only {
+					background-color: #edebeb;
+				}
+				input.ginput_total {
+					text-align: right;
+				}
+			}
+			.ginput_container_singleproduct .ginput_product_price_wrapper {
+				padding-right: 30px;
+			}
+		} // fields
+
+	.gform_footer {
+		display: flex;
+		justify-content: flex-end; // put button on right
+
+		input[type=button],
+		input[type=submit] { //  Make submit look like buttons on the site.
+				color: $form-button-color;
+		    padding: 5px 16px;
+				border: 2px solid $form-button-border;
+		    font-size: 20px!important;
+		    text-align: center;
+		    cursor: pointer;
+			  background-color: $form-button-bkg;
+				font-family: 'Open Sans',Helvetica,Arial,Lucida,sans-serif;
+				text-transform: uppercase;
+			  //line-height: 1.7em;
+			}
+			input[type=button]:hover,
+			input[type=submit]:hover {
+				background-color: $form-button-hover-bkg;
+				color: $form-button-hover-color;
+			}
+	} // gform footer
+	.gform-page-footer { // multi page form
+		input[type=submit],
+		.gform_previous_button,
+		.gform_next_button {
+			color: $button-color!important;
+			border: 3px solid $button-border;
+			padding: 4px 8px;
+			font-size: 20px!important;
+			text-align: center;
+			cursor: pointer;
+			background-color: $button-bkg;
+			text-transform: uppercase;
+		}
+		.gform_previous_button  {
+			background-color: #a52c38!important;
+		}
+		input[type=submit]:hover,
+		.gform_previous_button:hover,
+		.gform_next_button:hover {
+			background-color: $button-hover-bkg!important;
+			color: $button-hover-color!important;
+			border-color: $button-hover-border;
+		}
+	}
+} // gform wrapper
+
+.gform_wrapper form.rmm-gform-oneline {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: baseline; // lineup submit with bottom of input fields
+	.gfield_label {
+		margin-bottom: 0px;
+	}
+	.gform_footer {
+		//padding-top: 0px;
+		padding-left: 10px;
+		padding-bottom: 0px;
+	}
+}
+@media all and (max-width: 640px) {
+	.gform_wrapper form.rmm-gform-oneline {
+		flex-direction: column;
+	}
+}
+.gform_wrapper.rmm-gform-center_wrapper {
+	.gform_heading {
+		text-align: center;
+	}
+	.rmm-gform-center {
+		justify-content: center;
+	}
+}
