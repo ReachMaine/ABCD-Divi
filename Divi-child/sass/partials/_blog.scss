@@ -1,32 +1,64 @@
 /* styling for blog module & blog posts */
 
-
 /*
-  rmm-blog-image-left => set the blog archive s.t. image if there is one is on hte left
+  rmm-bloggrid-image-left => set the blog grid archive s.t. image is on the left 
+  using float lets text wrap around image.
+
+  need to .js to add a wrapper around the title & text & media.  see rmm-blog.js 
 */
 
+  /*grid blog*/
+  .et_pb_module.rmm-bloggrid-image-left {
+    article.et_pb_post {
+      border: 0px;
+      padding: 0px!important;
+      .et_pb_image_container {
+        margin: 0px!important;
+        padding-right: 10px;
+        width: 100px;
+        float: left;
+        .entry-featured-image-url {
+          margin-bottom: 0px;
+        }
+      }
+
+    }
+  }
+@media (min-width: 981px) {
+   .et_pb_module.rmm-bloggrid-image-left {
+    .column.size-1of3 {
+       width: 32%!important;
+    }
+      .column.size-1of3:not(:last-of-type) {
+        margin-right: 2%!important;
+      }
+    }
+}
+
+// full width blog - image left; 
 @media (min-width: 767px) {
 
   /*set the image width*/
-  .et_pb_module.et_pb_posts.rmm-bloggrid-image-left {
-    article {
-      border: 0px;
-      display: flex;
-      flex-direction: row;
+  .et_pb_module.et_pb_posts.rmm-blog-right {
+    article.has-post-thumbnail {
       .entry-featured-image-url  {
-        margin: 0px!important;
-        padding-right: 10px;
+        // width: 30%;
+        max-width: 115px;
+        float: left;
+        margin-bottom: 0!important;
+        padding-right: 30px;
       }
 
       /*set the details width*/
+      .rmm-blog-toi-text {
+       // width: 70%;
+        float: left;
 
-      .entry-title,
-      .post-meta,
-      .post-content {
-       }
+      }
     }
   }
 } 
+
 
 /*blog image aspect ratio square 1:1*/
 .rmm-blog-image-sq .entry-featured-image-url {
@@ -43,4 +75,15 @@
   bottom: 0;
   object-fit: cover;
 }
+
+/* set halo around image in bloggrid-image-left */
+
+
+  .et_pb_module.rmm-bloggrid-image-left {
+    article.et_pb_post {
+      .et_pb_image_container {
+
+      }
+    }
+  }
 

@@ -15,13 +15,21 @@
 				            	break;
 				        }
 						break; */
-						case 'Divi': {
-							switch ( $translated_text ) {
-									 case 'Category: ' : // remove Category: from front of blog archives.
-											 $translated_text =  '';
-											 break;
-							 }
-						} // end ohin
+					case 'Divi': 
+						switch ( $translated_text ) {
+									case 'Category: ' : // remove Category: from front of blog archives.
+											$translated_text =  '';
+											break;
+							}
+						break;					
+					case "et_builder" : 
+						switch ( $translated_text ) {
+							case 'read more' :
+								$translated_text = "Read life story";
+								break;
+						}
+						break; 
+					 //
 					default:
 						/* switch ( $translated_text ) {
 				            case 'Category' :

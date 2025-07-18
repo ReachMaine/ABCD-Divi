@@ -17,8 +17,24 @@
 
 // change read more to learn more by class on blog module
 
-(function ($) {
+/*(function ($) {
     $(document).on("ready ajaxComplete", function () {
       $(".rmm-learn-more-text .et_pb_post a.more-link").html("Read life story");
     });
   })(jQuery);
+*/
+/* 
+  (function($) {
+	$(document).ready(function() {
+
+	var custom_read_more_text = 'Read life story';
+
+	$(".rmm-learn-more-text .more-link").text(custom_read_more_text);
+	$(".pagination a").click(function(){
+		$(document).ajaxSuccess(function(){
+			$(".rmm-learn-more-text .more-link").text(custom_read_more_text);
+		});
+	})
+	});
+})(jQuery)
+*/
