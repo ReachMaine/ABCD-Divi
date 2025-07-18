@@ -17,9 +17,12 @@
 						break; */
 					case 'Divi': 
 						switch ( $translated_text ) {
-									case 'Category: ' : // remove Category: from front of blog archives.
-											$translated_text =  '';
-											break;
+								case 'Category: ' : // remove Category: from front of blog archives.
+										$translated_text =  '';
+									break;
+								case 'Submit a Comment':
+										$translated_text = "Add Condolence.";
+									break;
 							}
 						break;					
 					case "et_builder" : 
@@ -27,6 +30,33 @@
 							case 'read more' :
 								$translated_text = "Read life story";
 								break;
+							case 'Submit a Comment':
+								$translated_text = "Add Condolence";
+								break;
+							case '1 Comment': 
+								$translated_text = "1 Condolence";
+								break;
+							case '0 Comments':
+								$translated_text = "No Condolences yet";
+								break;	
+							case 'Comments':
+								$translated_text = "Condolences";
+								break;
+							// form
+							case 'Message Field':   // for comment form
+								$translated_text = "Condolence";
+								break;	
+
+							case 'Submit Comment':   // for comment form
+								$translated_text = "Post Condolence";
+								break;	
+							// navigation
+							case '<span class="meta-nav">&larr;</span> Older Comments':
+								$translated_text = '<span class="meta-nav">&larr;</span> Older Condolences';
+								break;	
+							case 'Newer Comments <span class="meta-nav">&rarr;</span>':
+								$translated_text = 'Newer Condolences <span class="meta-nav">&rarr;</span>';
+								break;								
 						}
 						break; 
 					 //
