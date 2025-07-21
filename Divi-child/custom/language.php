@@ -37,7 +37,7 @@
 								$translated_text = "1 Condolence";
 								break;
 							case '0 Comments':
-								$translated_text = "No Condolences yet";
+								$translated_text = "";
 								break;	
 							case 'Comments':
 								$translated_text = "Condolences";

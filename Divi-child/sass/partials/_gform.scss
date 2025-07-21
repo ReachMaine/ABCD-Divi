@@ -1,5 +1,5 @@
 /* gravity forms styling */
-.gform_wrapper {
+/* .gform_wrapper {
 	accent-color: $button-bkg;
 	.gform_fields  { // ul
 		.gfield {
@@ -28,15 +28,15 @@
 
 		input[type=button],
 		input[type=submit] { //  Make submit look like buttons on the site.
-				color: $form-button-color;
+			color: $form-button-color;
 		    padding: 5px 16px;
-				border: 2px solid $form-button-border;
+			border: 2px solid $form-button-border;
 		    font-size: 20px!important;
 		    text-align: center;
 		    cursor: pointer;
-			  background-color: $form-button-bkg;
-				font-family: 'Open Sans',Helvetica,Arial,Lucida,sans-serif;
-				text-transform: uppercase;
+			 background-color: $form-button-bkg;
+			font-family: 'Open Sans',Helvetica,Arial,Lucida,sans-serif;
+			text-transform: uppercase;
 			  //line-height: 1.7em;
 			}
 			input[type=button]:hover,
@@ -70,7 +70,8 @@
 		}
 	}
 } // gform wrapper
-
+*/
+/* from old site */
 .gform_wrapper form.rmm-gform-oneline {
 	display: flex;
 	flex-direction: row;
@@ -98,3 +99,92 @@
 		justify-content: center;
 	}
 }
+
+/* gravity forms styling */
+// All gravity forms
+.gform_wrapper {
+  border: 20px solid $abcd-primary;
+  padding: 20px;
+  .percentbar_blue {
+    background-color: $abcd-primary;
+  }
+  .gf_progressbar_wrapper {
+      .gf_progressbar {
+        .gf_progressbar_percentage.percentbar_blue {
+          background-color: $abcd-primary;
+        }
+      }
+  }
+
+  .gform_body {
+
+    ul.gform_fields {
+      hr {
+        margin-top: 0px; //
+      }
+      li.gfield {
+        .gfield_description {
+          padding-top: 0px!important;
+        }
+        input[type=text] {
+          background-color: white;
+        }
+        input[type=checkbox],
+        input[type=radio] {
+          transform: scale(1.4, 1.4);
+          margin-left: 5px!important;
+          margin-top: 0px!important;
+        }
+        ul.gfield_checkbox,
+        ul.gfield_radio {
+          label:before {
+            display: none; // clear out theme label (checkboxes)
+          }
+          label {
+            font-size: .7em;
+          }
+        }
+      } // regular field
+      li.gfield.abcd-gf-nobottomborder {
+        border-bottom: 0px;
+      } // end field nobottomborder
+    }
+  }
+
+	.gform_footer {
+    text-align: right;
+    input[type=submit] {
+
+    }
+    input[type=submit]:hover {
+
+    }
+
+	} // gform footer
+
+	.gform-page-footer { // multi page form
+		input[type=submit],
+		.gform_previous_button,
+		.gform_next_button {
+			color: $button-color!important;
+			border:0px;
+			padding: 14px 20px;
+			font-size: 20px!important;
+			text-align: center;
+			cursor: pointer;
+			background-color: $button-bkg;
+			text-transform: uppercase;
+		}
+		.gform_previous_button  {
+			background-color: #48321e!important;
+		}
+		input[type=submit]:hover,
+		.gform_previous_button:hover,
+		.gform_next_button:hover {
+			background-color: $button-hover-bkg!important;
+			color: $button-hover-color!important;
+			//border-color: $button-hover-border;
+		}
+	}
+} // gform wrapper
+

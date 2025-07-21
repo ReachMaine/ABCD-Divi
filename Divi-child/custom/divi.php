@@ -80,3 +80,19 @@ function custom_et_pb_custom_search( $query = false ) {
 		}
 	}
 }
+// remove URL/website from comment form
+add_filter('comment_form_default_fields', 'website_remove');
+function website_remove($fields)
+{
+   if(isset($fields['url']))
+   unset($fields['url']);
+   return $fields;
+}
+// replace comment placeholder in textarea on comment form
+function custom_comment_form_placeholders( $fields ) {
+  if ( isset( $fields['comment'] ) ) {
+    $fields['comment'] = '<textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required placeholder="Condolence *"></textarea>';
+  }
+  return $fields;
+}
+add_filter( 'comment_form_fields', 'custom_comment_form_placeholders' );
