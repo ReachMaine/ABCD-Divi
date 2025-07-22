@@ -27,6 +27,9 @@
 						break;					
 					case "et_builder" : 
 						switch ( $translated_text ) {
+							case 'on %1$s at %2$s': 
+								$translated_text = ' %1$s';
+								break;
 							case 'read more' :
 								$translated_text = "Read life story";
 								break;

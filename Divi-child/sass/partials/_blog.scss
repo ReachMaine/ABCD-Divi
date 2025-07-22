@@ -10,6 +10,7 @@
   /*grid blog*/
   .et_pb_module.rmm-bloggrid-image-left {
     article.et_pb_post {
+      background-color: transparent;
       border: 0px;
       padding: 0px!important;
       .et_pb_image_container {
@@ -20,6 +21,9 @@
         .entry-featured-image-url {
           margin-bottom: 0px;
         }
+      }
+      .post-meta {
+        line-height: 1em;
       }
 
     }
@@ -40,6 +44,12 @@
 
   /*set the image width*/
   .et_pb_module.et_pb_posts.rmm-blog-right {
+    article {
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid $abcd-lt-grey;
+      padding-left:  30px;
+    }
     article.has-post-thumbnail {
       .entry-featured-image-url  {
         width: 115px; 
@@ -51,24 +61,12 @@
       /*set the details width*/
       .rmm-blog-toi-text {
         padding-left: 20px; 
-        max-width: 80%;
-        
-        float: left;
-
+        display:flex;
+        flex-direction: column;
       }
     }
   }
- @media (max-width: 767px) {
-  .et_pb_module.et_pb_posts.rmm-blog-right {
-          // set the details width
-      .rmm-blog-toi-text {
-        width:60%;
-        max-width:60%;
 
-
-      }
-  }
-}
 
 
 /*blog image aspect ratio square 1:1*/
@@ -87,14 +85,25 @@
   object-fit: cover;
 }
 
-/* set halo around image in bloggrid-image-left */
+// page navigation styling.
+.et_pb_module.et_pb_posts {
 
+  .wp-pagenavi {
+    text-align: center;
+    padding-top: 30px;
+    a, span {
+        padding: 12px 12px;
+     }
 
-  .et_pb_module.rmm-bloggrid-image-left {
-    article.et_pb_post {
-      .et_pb_image_container {
+    span.current,
+    a:hover {
+      color: #ffffff!important;
+      background-color: $abcd-med-beige;
+      border-color: $abcd-med-beige!important;
+    }
+    span.current {
+      font-weight: bold;
 
-      }
     }
   }
-
+}

@@ -48,3 +48,12 @@ sup {
     background: $form-button-hover-bkg!important;
   }
 }
+
+// search module customizations....
+.et_pb_module.et_pb_search.abcd-search-button {
+  input[type=submit] {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 20px;
+  }
+}
