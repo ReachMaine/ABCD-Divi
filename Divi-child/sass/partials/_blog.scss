@@ -89,7 +89,10 @@
 .et_pb_module.et_pb_posts {
 
   .wp-pagenavi {
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: center;
     padding-top: 30px;
     a, span {
         padding: 12px 12px;
